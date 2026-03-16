@@ -24,7 +24,7 @@ def price(quantity1, products1):
         # Appending data to the lists inside the imported 'df' module
         df.price.append(total)
         df.update.append(
-            f"Product: {products1} | Quantity: {quantity1} | Total cost: {total}"
+            f"Product: {products1} | Quantity: {quantity1} | total cost: {total}"
         )
 
         continuee()
@@ -41,16 +41,8 @@ def continuee():
     if want.lower() == "yes":
         name() # Loops back to the start
     elif want.lower() == "no":
-        print("\nSale completed.")
-
-        # Iterates through the stored records in df.update and prints them
-        print("\nSales record:")
-        for sale in df.update:
-            print(sale)
+        print("--Daily sales summary--")
     else:
         # Validates that the user only types 'yes' or 'no'
         print("Invalid option.")
         continuee()
-
-# Main entry point to start the program
-name()
